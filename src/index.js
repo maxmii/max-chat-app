@@ -16,6 +16,6 @@ io.on('connection', () => {
     console.log('New Websocket connection')
 })
 
-app.listen(port, () => {
+server.listen(port, () => {
     console.log(`Server is up on port ${port}`)
 })
