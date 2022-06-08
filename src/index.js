@@ -1,14 +1,20 @@
 const path = require('path')
 const express = require('express')
-const exp = require('constants')
+const http = require('http')
+const socketio = require('socket.io')
 
 const app = express()
-const port = process.env.PORT || 3000
+const server = http.createServer(app)
+const io = socketio(server)
 
-//Define paths for Express config
+const port = process.env.PORT || 3000
 const publicDir = path.join(__dirname, '../public') 
 
 app.use(express.static(publicDir))
+
+io.on('connection', () => {
+    console.log('New Websocket connection')
+})
 
 app.listen(port, () => {
     console.log(`Server is up on port ${port}`)
