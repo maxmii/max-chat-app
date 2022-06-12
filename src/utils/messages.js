@@ -5,6 +5,13 @@ const generateMessage = (text) => {
     }
 }
 
+const generateLocationMessage = (url) => {
+    return {
+        url,
+    }
+}
+
 module.exports = {
-    generateMessage
+    generateMessage,
+    generateLocationMessage
 }
