@@ -49,24 +49,6 @@ const getUsersInRoom = (room) => {
 }
 
 
-addUser({
-    id: 1,
-    username: 'Max',
-    room: 'London'
-})
-
-
-addUser({
-    id: 2,
-    username: 'Dan',
-    room: 'London'
-})
-
-const user = getUser(1)
-console.log(user)
-const userList = getUsersInRoom('London')
-console.log(userList)
-
 module.exports = {
     addUser,
     removeUser,
